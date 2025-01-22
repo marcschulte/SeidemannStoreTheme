@@ -1,0 +1,36 @@
+#sweb-buybox-accordion-container {
+    border: 1px solid $border-color;
+
+    .sweb-buybox-accordion {
+        padding: 1rem;
+        position: relative;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+        }
+
+        .sweb-product-detail-buybox-accordion-title {
+            text-transform: uppercase;
+
+            .icon {
+                width: 0.75rem;
+                height: 0.75rem;
+                transform: rotate(0deg);
+                transition: 0.3s all ease-in-out;
+
+                svg {
+                    top: 0;
+                }
+            }
+
+            &[aria-expanded="true"] .icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        .product-detail-review-item {
+            border: 0 none;
+            margin-bottom: 0;
+        }
+    }
+}
