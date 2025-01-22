@@ -14,7 +14,7 @@
                             role="button"
                             aria-expanded="true"
                             aria-controls="acc-description">
-                            <span>Details</span>
+                            <span>{{ 'detail.buyboxAccordions.descriptionAccordionTitle' | trans }}</span>
                         </a>
 
                         <div class="collapse content show" 
@@ -37,7 +37,7 @@
                             role="button"
                             aria-expanded="false"
                             aria-controls="acc-reviews">
-                            <span>Reviews ({{page.reviews.totalReviews}})</span>
+                            <span>{{ 'detail.buyboxAccordions.reviewsAccordionTitle' | trans({'%count%': page.reviews.totalReviews}) }}</span>
                         </a>
 
                         <div class="collapse content" 
