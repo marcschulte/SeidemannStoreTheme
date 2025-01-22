@@ -1,0 +1,59 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-buy-box.html.twig' %}
+
+{% block element_buy_box %}
+    {{ parent() }}
+
+    {% block element_buy_box_accordions %}
+        <div id="sweb-buybox-accordion-container">
+            {% block element_buy_box_accordion_description %}
+                {% if page.product.translated.description %}
+                    <div class="sweb-buybox-accordion">
+                        <a class="sweb-product-detail-buybox-accordion-title col-12 d-flex justify-content-between"
+                            data-bs-toggle="collapse"
+                            href="#acc-description"
+                            role="button"
+                            aria-expanded="true"
+                            aria-controls="acc-description">
+                            <span>{{ 'detail.buyboxAccordions.descriptionAccordionTitle' | trans }}</span>{% sw_icon 'arrow-head-down' %}
+                        </a>
+
+                        <div class="collapse content show" 
+                            id="acc-description"
+                            data-bs-parent="#sweb-buybox-accordion-container">
+                            <div class="sweb-accordion-content mt-3" itemprop="description">
+                                {{ page.product.translated.description|raw }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
+
+            {% block element_buy_box_accordion_reviews %}
+                {% if page.reviews %}
+                    <div class="sweb-buybox-accordion">
+                        <a class="sweb-product-detail-buybox-accordion-title col-12 d-flex justify-content-between"
+                            data-bs-toggle="collapse"
+                            href="#acc-reviews"
+                            role="button"
+                            aria-expanded="false"
+                            aria-controls="acc-reviews">
+                            <span>{{ 'detail.buyboxAccordions.reviewsAccordionTitle' | trans({'%count%': page.reviews.totalReviews}) }}</span>{% sw_icon 'arrow-head-down' %}
+                        </a>
+
+                        <div class="collapse content" 
+                            id="acc-reviews"
+                            data-bs-parent="#sweb-buybox-accordion-container">
+                            <div class="sweb-accordion-content mt-3" itemprop="reviews">
+                                {% for review in page.reviews %}
+                                    <div class="product-detail-review-list-content">
+                                        {% sw_include '@Storefront/storefront/component/review/review-item.html.twig' %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}

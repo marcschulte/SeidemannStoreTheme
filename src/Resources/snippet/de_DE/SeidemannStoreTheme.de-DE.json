@@ -1,0 +1,8 @@
+{
+    "detail": {
+        "buyboxAccordions": {
+            "descriptionAccordionTitle": "Beschreibung",
+            "reviewsAccordionTitle": "Bewertungen (%count%)"
+        }
+    }
+}

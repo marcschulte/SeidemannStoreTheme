@@ -1,0 +1,15 @@
+/*
+Basic styles
+==================================================
+Contains the imports to all basic styles.
+
+The file organization follows the 7-1 pattern architecture
+https://sass-guidelin.es/#the-7-1-pattern
+
+@sw-package framework
+*/
+
+/*
+ * Page-specific styles
+ * -------------------- */
+@import 'page/product-detail/product-detail';
