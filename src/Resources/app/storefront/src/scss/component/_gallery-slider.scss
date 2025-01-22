@@ -1,0 +1,16 @@
+.gallery-slider-thumbnails-item {
+    height: auto;
+
+    &.tns-nav-active {
+        .gallery-slider-thumbnails-item-inner {
+            border-color: $border-color;
+            opacity: 1;
+        }
+    }
+
+    .gallery-slider-thumbnails-item-inner {
+        border-color: transparent;
+        padding: 0;
+        opacity: 0.5;
+    }
+}

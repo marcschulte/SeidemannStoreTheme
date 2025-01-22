@@ -10,6 +10,11 @@ https://sass-guidelin.es/#the-7-1-pattern
 */
 
 /*
+ * Components
+ * -------------------- */
+@import 'component/gallery-slider';
+
+/*
  * Page-specific styles
  * -------------------- */
 @import 'page/product-detail/product-detail';
