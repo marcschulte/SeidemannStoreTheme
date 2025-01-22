@@ -1,6 +1,14 @@
 {% sw_extends '@Storefront/storefront/element/cms-element-buy-box.html.twig' %}
 
 {% block element_buy_box %}
+    {% if page.product.manufacturer.translated.name %}
+        <span>{{ page.product.manufacturer.translated.name }}</span>
+    {% endif %}
+    
+    {% if page.product.translated.name %}
+        <h1 class="sweb-buybox-product-title">{{ page.product.translated.name }}</h1>
+    {% endif %}
+
     {{ parent() }}
 
     {% block element_buy_box_accordions %}
