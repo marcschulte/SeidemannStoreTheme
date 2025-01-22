@@ -1,0 +1,21 @@
+{
+  "name": "Seidemann Store Theme",
+  "author": "Seidemann Web GmbH",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@SeidemannStoreTheme"
+  ],
+  "style": [
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/seidemann-store-theme/seidemann-store-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ]
+}
